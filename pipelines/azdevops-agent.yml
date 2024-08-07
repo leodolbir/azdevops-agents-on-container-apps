@@ -29,5 +29,5 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: '$(templateFile)'
     overrideParameters: '-azpToken $(azpToken) -azpUrl $(azpUrl) -azpPool $(azpPool) -azpPoolId $(azpPoolId)'
-    deploymentMode: 'Complete'
+    deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
