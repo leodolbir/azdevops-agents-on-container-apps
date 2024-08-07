@@ -13,7 +13,7 @@ param azpUrl string
 param azpPool string
 param azpPoolId string
 
-resource containerApp 'Microsoft.App/containerApps@2022-06-01-preview' = {
+resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   name: 'capp-${name}'
   location: location
   tags: {
