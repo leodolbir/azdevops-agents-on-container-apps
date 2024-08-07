@@ -25,13 +25,13 @@ param azpToken string
 //
 // Deploy Log Analytics Workspace for logging
 //
-module law 'modules/law.bicep' = {
+/*module law 'modules/law.bicep' = {
     name: 'log-analytics-workspace'
     params: {
       location: location
       name: 'law-${workloadName}'
     }
-}
+}*/
 
 //
 // Deploy a managed Container Apps Environment
