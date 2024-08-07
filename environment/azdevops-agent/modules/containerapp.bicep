@@ -57,10 +57,9 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
           name: 'azdevops-agent'
         }
       ]      
-      revisionSuffix: 'azdevops-agent'
       scale: {
         maxReplicas: 10
-        minReplicas: 2
+        minReplicas: 0
         rules: [
           {
             name: 'jobsqueuelength'
