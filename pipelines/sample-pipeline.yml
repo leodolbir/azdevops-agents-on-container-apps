@@ -8,7 +8,7 @@ trigger:
 
 pool:
   # Make sure it uses the self-hosted agent pool! This must match the name.
-  name: azure-container-apps-pool
+  name: gor-platform-agents-aca
 
 steps:
 - script: echo Getting AzDevOps pipelines busy!
