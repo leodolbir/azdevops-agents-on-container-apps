@@ -14,13 +14,13 @@ param azpToken string
 //
 // Deploy vNet for Container Apps Environment injection
 //
-module vnet 'modules/vnet.bicep' = {
+/* module vnet 'modules/vnet.bicep' = {
   name: 'vnet'
   params: {
     location: location
     name: 'vnet-${workloadName}'
   }
-}
+} */
 
 //
 // Deploy Log Analytics Workspace for logging
@@ -36,7 +36,7 @@ module law 'modules/law.bicep' = {
 //
 // Deploy a managed Container Apps Environment
 //
-module containerAppEnvironment 'modules/environment.bicep' = {
+/* module containerAppEnvironment 'modules/environment.bicep' = {
   name: 'container-app-environment'
   params: {
     name: 'cae-${workloadName}'
@@ -46,8 +46,11 @@ module containerAppEnvironment 'modules/environment.bicep' = {
     vnetName: 'vnet-${workloadName}'
     infrastructureSubnetId: vnet.outputs.infrastructureSubnetId
   }
-}
+} */
 
+resource containerAppEnvironment 'Microsoft.App/managedEnvironments@2022-03-01' existing = {
+  name: 'goruseacedev'
+}
 //
 // Deploy Container App
 //
@@ -56,7 +59,7 @@ module containerApp 'modules/containerapp.bicep' = {
   params: {
     name: workloadName
     location: location
-    containerAppEnvironmentId: containerAppEnvironment.outputs.id
+    containerAppEnvironmentId: containerAppEnvironment.id
     containerImage: containerImage
     azpToken: azpToken
     azpUrl: azpUrl
