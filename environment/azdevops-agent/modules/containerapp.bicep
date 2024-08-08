@@ -17,7 +17,7 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   name: 'gor-${name}'
   location: location
   tags: {
-    owner: 'Leandro'
+    owner: 'Gordian'
     workload: 'AzureDevOps-Agents'
   }
   properties: {
