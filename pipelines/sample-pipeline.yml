@@ -22,7 +22,10 @@ jobs:
   strategy:
     matrix:
       aca:
-        AGENT_POOL: 'gor-platform-agents-aca-$(parameters.selectedEnv)'
+      - ${{ if eq(parameters.selectedEnv, 'dev') }}:
+          AGENT_POOL: 'gor-platform-agents-aca-dev'
+      - ${{ if eq(parameters.selectedEnv, 'qa') }}:
+          AGENT_POOL: 'gor-platform-agents-aca-qa'
   pool:
     name: $(AGENT_POOL)
 
