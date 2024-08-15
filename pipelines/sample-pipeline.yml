@@ -2,7 +2,7 @@ trigger:
 - main
 
 parameters:
-- name: environment
+- name: selectedEnv
   displayName: 'Select Environment'
   type: string
   default: dev
@@ -19,5 +19,5 @@ jobs:
     name: gor-platform-agents-aca-${{ parameters.selectedEnv }}
   steps:
   - script: |
-      echo "Building and deploying to the ${{ parameters.environment }} environment using the gor-platform-agents-aca-${{ parameters.environment }} agent pool."
+      echo "Building and deploying to the ${{ parameters.selectedEnv  }} environment using the gor-platform-agents-aca-${{ parameters.selectedEnv  }} agent pool."
     displayName: 'Execute Build and Deployment Script'
