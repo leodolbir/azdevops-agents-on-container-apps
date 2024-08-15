@@ -6,9 +6,20 @@
 trigger:
 - main
 
+parameters:
+  - name: selectedEnv
+    type: string
+    default: dev
+    displayName: 'Select Environment'
+    values:
+      - dev
+      - qa
+      - stg
+      - prd
+
 pool:
   # Make sure it uses the self-hosted agent pool! This must match the name.
-  name: gor-platform-agents-aca
+  name: 'gor-platform-agents-aca-$(parameters.selectedEnv)'
 
 steps:
 - script: echo Getting AzDevOps pipelines busy!
