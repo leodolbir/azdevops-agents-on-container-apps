@@ -19,7 +19,7 @@ parameters:
 
 pool:
   # Make sure it uses the self-hosted agent pool! This must match the name.
-  name: gor-platform-agents-aca-${{ parameters.selectedEnv }}
+  name: ${{ parameters.selectedEnv }}
 
 steps:
 - script: echo Getting AzDevOps pipelines busy!
