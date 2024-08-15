@@ -17,19 +17,14 @@ parameters:
       - stg
       - prd
 
-jobs:
-- job: MultiEnvironmentBuild
-  strategy:
-    matrix:
-      aca:
-      - ${{ if eq(parameters.selectedEnv, 'dev') }}:
-          AGENT_POOL: 'gor-platform-agents-aca-dev'
-      - ${{ if eq(parameters.selectedEnv, 'qa') }}:
-          AGENT_POOL: 'gor-platform-agents-aca-qa'
-  pool:
-    name: $(AGENT_POOL)
+pool:
+  # Make sure it uses the self-hosted agent pool! This must match the name.
+  name: gor-platform-agents-aca-${{ parameters.selectedEnv }}
 
-  steps:
-  - script: |
-      echo "Running build on $(AGENT_POOL)"
-    displayName: 'Run build on different environments'
+steps:
+- script: echo Getting AzDevOps pipelines busy!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo 'Run something else for Azure Container Apps KEDA autoscaling to trigger...'
+  displayName: 'Run something else for KEDA to auto-scale'
