@@ -1,30 +1,23 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
 parameters:
-  - name: selectedEnv
-    type: string
-    default: dev
-    displayName: 'Select Environment'
-    values:
-      - dev
-      - qa
-      - stg
-      - prd
+- name: environment
+  displayName: 'Select Environment'
+  type: string
+  default: dev
+  values:
+  - dev
+  - qa
+  - stg
+  - prd
 
-pool:
-  # Make sure it uses the self-hosted agent pool! This must match the name.
-  name: ${{ parameters.selectedEnv }}
-
-steps:
-- script: echo Getting AzDevOps pipelines busy!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo 'Run something else for Azure Container Apps KEDA autoscaling to trigger...'
-  displayName: 'Run something else for KEDA to auto-scale'
+jobs:
+- job: BuildAndDeploy
+  displayName: 'Build and Deploy Job'
+  pool:
+    name: gor-platform-agents-aca-${{ parameters.selectedEnv }}
+  steps:
+  - script: |
+      echo "Building and deploying to the ${{ parameters.environment }} environment using the gor-platform-agents-aca-${{ parameters.environment }} agent pool."
+    displayName: 'Execute Build and Deployment Script'
