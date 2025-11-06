@@ -14,6 +14,34 @@
 - **Structured Renegotiation Gates**: Set semiannual review triggers tied to macro indicators (tariffs, FX thresholds) and technology readiness to keep terms aligned without reneging.
 - **Digital Transparency (ROI Enabler)**: Mandate EDI, shared dashboards, and predictive analytics for demand, cost, and logistics to maintain trust and shorten dispute cycles.
 
+## Supplier Landscape (To Be Validated)
+
+**Data caveat**: Rankings and locations combine Ford purchasing intel, public filings, and industry benchmarks; confirm volumes and plant status with current sourcing data before contracting.
+
+### Ford Brake Caliper Suppliers
+
+| Supplier (Est. Volume Rank) | Primary Manufacturing Locations Serving Ford | Notes |
+| --- | --- | --- |
+| ZF TRW (1) | Fislisbach, Switzerland (engineering); Wojnicz, Poland (casting/machining); Nuevo León, Mexico (assembly) | Long-term Ford braking supplier covering F-150 and SUV programs; mix of aluminum and ductile iron calipers. |
+| Continental Automotive (2) | Frankfurt/Oder, Germany; Aguascalientes, Mexico; Wuhu, China | Supplies mid-size sedan and crossover lines; strong electronic parking brake integration. |
+| Brembo (3) | Homer, Michigan (machining/assembly); Stezzano, Italy (engineering); Escobedo, Mexico (foundry) | Focus on performance and premium trims; owns joint venture with Ford Performance for specialty calipers. |
+| Akebono Brake Corporation (4) | Elizabethtown, Kentucky; Iwate, Japan | Supports North American passenger platforms; known for low-dust ceramic calipers. |
+| Mando Corporation (5) | Pyeongtaek, South Korea; Opelika, Alabama (JV machining) | Provides calipers for global CD segment; competitive on integrated EPB units. |
+| Robert Bosch (6) | Juárez, Mexico; Bursa, Turkey | Targeted programs in light commercial vehicles; diversified footprint useful for risk balancing. |
+
+### Other Major OEM Caliper Suppliers
+
+| Supplier (Est. Global Rank) | Primary Manufacturing Locations | Key OEM Customers |
+| --- | --- | --- |
+| Brembo | Stezzano & Mapello, Italy; Nanjing, China; Escobedo, Mexico; Homer, Michigan | Ferrari, GM, Stellantis, BMW, Tesla |
+| Continental | Frankfurt/Oder, Germany; Aguascalientes, Mexico; Changshu, China | VW Group, Daimler Truck, Hyundai-Kia |
+| ZF TRW | Wojnicz, Poland; Pamplona, Spain; Anting, China | Stellantis, VW, GM |
+| Akebono | Iwate & Fukushima, Japan; Tennessee, USA; Guanajuato, Mexico | Toyota, Honda, Nissan |
+| Mando | Pyeongtaek, South Korea; Hefei, China; Chennai, India | Hyundai-Kia, Ford, Mahindra |
+| ADVICS (Aisin Group) | Handa & Kariya, Japan; Lebanon, Kentucky | Toyota, Subaru, Mazda |
+| Nissin Kogyo | Fukuroi, Japan; Ohio, USA; Foshan, China | Honda, Suzuki, Mazda |
+| Brakes India (TVS) | Sholinghur & Polambakkam, India | Mahindra, Tata, global aftermarket |
+
 ## Detailed Work Plan
 
 - **Phase 0 (Weeks 0–4)**: Build should-cost and risk models; map supplier footprint, capacity, and geopolitical exposure; baseline quality validation timelines and technology maturity by supplier.
